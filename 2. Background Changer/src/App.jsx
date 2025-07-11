@@ -22,6 +22,7 @@ function App() {
       <span onClick={changeBG}>Green</span>
       <span onClick={changeBG}>Blue</span>
       <span onClick={changeBG}>Orange</span>
+      <span onClick={changeBG}>White</span>
     </div>
   )
 }
