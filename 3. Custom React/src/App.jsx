@@ -1,40 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
 
-// Step 1: Create an object for React element representing an anchor tag
-const anchorElement = {
-  type: 'a',
-  props: {
-    href: 'https://google.com/',
-    target: '_blank',
-    innerText: 'Click me',
-  }
-}
+export default function DynamicAnchor() {
+  const link = {
+    href: "https://www.google.com",
+    text: "Click me to Visit Google"
+  };
 
-// Step 2: Create a function to generate HTML code from the React-like element object
-const generateHTML = (element) => {
-  const { type, props } = element;
-  const attributes = Object.keys(props).map((each) => `${each}="${props[each]}"`).join(' ')
-  // console.log(attributes);
-  return `<${type} ${attributes}>${props.innerText}</${type}>`;
-}
-
-// Step 3: Create a function for custom rendering
-const customRender = (element, targetSelector) => {
-  const html = generateHTML(element);
-  const selector = document.querySelector(targetSelector);
-
-  selector.innerHTML = html;
-}
-
-function App() {
   return (
-    <>
-      {customRender(anchorElement, '#root')}
-    </>
-  )
+    <div style={{ padding: '20px' }}>
+      <a href={link.href} target="_blank" rel="noopener noreferrer">
+        {link.text}
+      </a>
+    </div>
+  );
 }
-
-export default App
