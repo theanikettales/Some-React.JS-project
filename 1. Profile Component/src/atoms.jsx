@@ -3,10 +3,10 @@ import { atom, selector } from "recoil";
 export const profileAtom = atom({
     key: 'profileAtom',
     default: [{
-        profileUrl: 'https://magiccard.odisha.gov.in/images/nua-o.png',
-        name: 'Manas K Pradhan',
+        profileUrl: 'src/assets/aniket.jpg',
+        name: 'Aniket Singh',
         age: 24,
-        address: 'Odisha, India',
+        address: 'Gurgaon Haryana',
         followers: '60k',
         likes: '103k',
         photos: '1.5k',

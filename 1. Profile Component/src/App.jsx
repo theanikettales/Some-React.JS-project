@@ -12,15 +12,7 @@ function App() {
   useEffect(() => {
     updateAllProfiles((old) => [
       ...old,
-      {
-        profileUrl: 'https://magiccard.odisha.gov.in/images/nua-o.png',
-        name: 'Bob Smith',
-        age: 28,
-        address: 'London, UK',
-        followers: 80000,
-        likes: 120000,
-        photos: 1800,
-      }
+      
     ])
   }, [])
 
